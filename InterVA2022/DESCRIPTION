@@ -1,0 +1,16 @@
+Package: InterVA2022
+Type: Package
+Title: InterVA model for 2022 WHO VA instrument
+Version: 0.0.999
+Date: 2025-04-28
+Authors@R: c(
+  person("CDC Foundation")
+  )
+Depends: R (>= 4.5.0)
+Encoding: UTF-8
+Description: InterVA model for 2022 WHO VA instrument.
+License: GPL-3
+NeedsCompilation: no
+RoxygenNote: 7.1.1
+Suggests: 
+    ggplot2
