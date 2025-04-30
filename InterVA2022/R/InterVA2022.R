@@ -275,7 +275,7 @@ InterVA2022 <- function (Input, HIV, Malaria, Covid,
   ID.list <- rep(NA, N)
   VAresult <- vector("list", N)
   if (write && append == FALSE) {
-    header = c("ID", "MALPREV", "HIVPREV", "PREGSTAT", "PREGLIK", 
+    header = c("ID", "MALPREV", "HIVPREV", "COVIDPREV", "PREGSTAT", "PREGLIK", 
                "CAUSE1", "LIK1", "CAUSE2", "LIK2", "CAUSE3", "LIK3",
                "INDET")
     if (output == "extended") 
@@ -304,7 +304,7 @@ InterVA2022 <- function (Input, HIV, Malaria, Covid,
       cat(paste("100% completed\n", sep = ""))
     }
     
-    index.current <- as.character(Input[i, 1])   
+    index.current <- as.character(Input[i, 1])
     Input[i, which(toupper(Input[i, ]) == "N")] <- "0"
     Input[i, which(toupper(Input[i, ]) == "Y")] <- "1"
     Input[i, which(Input[i, ] != "1" & Input[i, ] != "0")] <- NA
@@ -431,7 +431,7 @@ InterVA2022 <- function (Input, HIV, Malaria, Covid,
       save.va2022.prob(VAresult[[i]], filename = filename, write)
   }
   if (write) {
-    cat(errors, file="errorlog2022.txt", append=TRUE)
+    cat(errors, file="errorlog2022.txt", sep="\n", append=TRUE)
   }
   
   setwd(globle.dir)
@@ -439,6 +439,6 @@ InterVA2022 <- function (Input, HIV, Malaria, Covid,
   out <- list(ID = ID.list[which(!is.na(ID.list))],
               VA2022 = VAresult[which(!is.na(ID.list))], 
               Malaria = Malaria, HIV = HIV, Covid = Covid)
-  class(out) <- "InterVA2022"
+  class(out) <- "interVA2022"
   return(out)
 }
