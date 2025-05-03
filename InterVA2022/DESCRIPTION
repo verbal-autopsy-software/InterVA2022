@@ -1,14 +1,14 @@
-Package: InterVA2022
+Package: InterVA2022Prerelease
 Type: Package
-Title: InterVA model for 2022 WHO VA instrument
+Title: Verbal Autopsy Coding with 'InterVA' Algorithm for the WHO 2022 VA Instrument
 Version: 0.0.999
 Date: 2025-04-28
 Authors@R: c(
-  person("CDC Foundation", email = "interva2022@cdcfoundation.org", role = c("aut", "cre"))
+  person("openVA Team for CDC Foundation", email = "info@openva.net", role = c("aut", "cre"))
   )
 Depends: R (>= 4.4.0)
 Encoding: UTF-8
-Description: InterVA model for 2022 WHO VA instrument.
+Description: Computes individual causes of death and population cause-specific mortality fractions using the 'InterVA' algorithm for the WHO 2022 instrument. The algorithm has not been tested or validated at the moment. Use at your own risk.
 License: GPL-3
 NeedsCompilation: no
 RoxygenNote: 7.3.2
